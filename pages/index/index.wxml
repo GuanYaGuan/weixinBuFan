@@ -1,0 +1,347 @@
+<!-- 导航栏 -->
+<view class="nav-box">
+  <view class="left">
+    <image class="logo" src="/images/logo.png"></image>
+  </view>
+  <view class="center">
+    <text>郑州高端互联网技术培训</text>
+  </view>
+  <view class="right" catchtap="openNav">
+    <image src="/images/nav-right.png"></image>
+  </view>
+</view>
+<view class="next-box" style="height: {{navh}};position: absolute;top:80rpx;left: 0;width: 750rpx; z-index: 80;background: #FFFFFF;box-shadow: 0 2px 4px 0 rgba(198,198,198,0.20);">
+  <view class="item" wx:if="{{descshow}}">首页</view>
+  <view class="item" wx:if="{{descshow}}">关于</view>
+  <view class="item" wx:if="{{descshow}}">介绍</view>
+  <view class="item" wx:if="{{descshow}}">环境</view>
+  <view class="item" wx:if="{{descshow}}">作品</view>
+  <view class="item" wx:if="{{descshow}}">就业</view>
+  <view class="item" wx:if="{{descshow}}">优势</view>
+  <view class="item" wx:if="{{descshow}}">联系</view>
+</view>
+<!-- banner -->
+<view class="banner">
+  <image src="/images/bf_s.jpg"></image>
+</view>
+<!-- 关于我们 -->
+<view class="about-box">
+  <view class="top">
+    <view class="title">关于我们</view>
+    <view class="line"></view>
+    <view class="eng">Course</view>
+  </view>
+  <view class="center">
+    <image src="/images/about_us.jpg"></image>
+    <view class="info">
+      不凡学院老师由一帮80后老北漂组成。我们分别来自于腾讯网，凤凰网，网易 等北京知名互联网公司，我们都曾奋斗在一线岗位，都曾面试新人，带新人，深知公司需要什么样的人才。我们会通过实战项目结合 培训的教学模式，把知名互联网公司的工作流程，设计方法，开发方 式手把手的教给大家，在不凡学习就相当于工作，高薪就业你也行！
+    </view>
+  </view>
+</view>
+<!-- UI设计 -->
+<view class="UI">
+  <view class="top">
+    UI设计
+  </view>
+  <view class="center">
+    就业方向：网页设计，APP设计，管理系统软件设计
+    智能电视，车载系统，智能穿戴设备等软件设计
+  </view>
+  <view class="bottom" bindtap="openDetailUI">
+    课程详情
+  </view>
+</view>
+<!-- H5前端 -->
+<view class="UI H5">
+  <view class="top">
+    H5前端开发
+  </view>
+  <view class="center">
+    就业方向：网站开发，网页特效开发，APP开发
+    微信小程序开发，网页游戏开发，移动WEB开发
+  </view>
+  <view class="bottom" bindtap="openDetailH">
+    课程详情
+  </view>
+</view>
+<!-- 点击出现蒙层 UI-->
+<view class="mask" wx:if="{{isshow1}}" bindtap="maskEvent1">
+  <view class="white-box-center a" catchtap="boxEvent">
+    <view class="title">UI设计精品班
+    </view>
+    <view class="desc">课程周期：3个月</view>
+    <view class="desc">上课时间：周一至周五</view>
+    <view class="desc">招生对象：大专以上学历</view>
+    <view class="desc">班级人数：每班限制15人</view>
+  </view>
+</view>
+<!-- H5 -->
+<view class="mask" wx:if="{{isshow2}}" bindtap="maskEvent2">
+  <view class="white-box-center b" catchtap="boxEvent">
+    <view class="title">H5前端开发精品班
+
+    </view>
+    <view class="desc">课程周期：3个月</view>
+    <view class="desc">上课时间：周一至周五</view>
+    <view class="desc">招生对象：大专以上学历</view>
+    <view class="desc">班级人数：每班限制15人</view>
+  </view>
+</view>
+<!-- 教学环境 -->
+<view class="environment">
+  <view class="top">
+    <view class="title">教学环境</view>
+    <view class="line"></view>
+    <view class="eng">Course</view>
+  </view>
+  <view class="center">
+    <view class="item">
+      <image src="/images/evn_1.jpg"></image>
+      <view class="white-box a">
+        <view class="desc a">
+          <view class="title">不凡学院</view>
+          <view class="info">平凡人的不平凡
+            我们在学院等你</view>
+        </view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="white-box b">
+        <view class="desc b">
+          <view class="title">全MAC教学</view>
+          <view class="info">全MAC设备，与一线互联网公司设备同步，提前适应工作环境！
+          </view>
+        </view>
+      </view>
+      <image class="right-image" src="/images/evn_4.jpg"></image>
+    </view>
+    <view class="item">
+      <image src="/images/evn_3.jpg"></image>
+      <view class="white-box c">
+        <view class="desc c">
+          <view class="title">休息角</view>
+          <view class="info">小资的学习环境，引爆你的设计灵感！</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 学员作品 -->
+<view class="student">
+  <view class="top">
+    <view class="title">学员作品</view>
+    <view class="line"></view>
+    <view class="eng">Design</view>
+  </view>
+  <swiper indicator-active-color="#0040a7" indicator-dots='true' class="swiper" next-margin="80rpx" style='height:{{Hei}}'>
+    <swiper-item class="swiper-box">
+      <image src="/images/banner1.jpg"></image>
+      <image src="/images/banner2.jpg"></image>
+      <image src="/images/banner3.jpg"></image>
+      <image src="/images/banner4.jpg"></image>
+      <image src="/images/banner5.jpg"></image>
+    </swiper-item>
+    <swiper-item class="swiper-box">
+      <image src="/images/banner1.jpg"></image>
+      <image src="/images/banner2.jpg"></image>
+      <image src="/images/banner3.jpg"></image>
+      <image src="/images/banner4.jpg"></image>
+      <image src="/images/banner5.jpg"></image>
+    </swiper-item>
+    <swiper-item class="swiper-box">
+      <image src="/images/banner1.jpg"></image>
+      <image src="/images/banner2.jpg"></image>
+      <image src="/images/banner3.jpg"></image>
+      <image src="/images/banner4.jpg"></image>
+      <image src="/images/banner5.jpg"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 学员就业 -->
+<view class="work">
+  <view class="top">
+    <view class="title">学员就业</view>
+    <view class="line"></view>
+    <view class="eng">Employment</view>
+  </view>
+  <view class="item a">
+    <view class="info">
+      <view class="a">终身推荐就业</view>
+      <view class="b">学哥学姐都是你的人脉</view>
+    </view>
+    <view class="circle">
+      <image src="/images/edit.jpg"></image>
+    </view>
+  </view>
+  <view class="item b">
+    <view class="info">
+      <view class="a">就业辅导</view>
+      <view class="b">一对一全程就业跟踪指导</view>
+    </view>
+    <view class="circle">
+      <image src="/images/board.jpg"></image>
+    </view>
+  </view>
+  <view class="item c">
+    <view class="info">
+      <view class="a">高薪就业</view>
+      <view class="b">就业薪资7-20k</view>
+    </view>
+
+    <view class="circle">
+      <image src="/images/company.jpg"></image>
+    </view>
+  </view>
+</view>
+<!-- 师资优势 -->
+<view class="teacher">
+  <view class="top">
+    <view class="title">师资优势</view>
+    <view class="line"></view>
+    <view class="eng">Teacher</view>
+  </view>
+  <swiper class="swiper" style="height:700rpx" next-margin="120rpx" previous-margin="60rpx" indicator-dots='true' indicator-active-color="#0040a7">
+    <swiper-item class="item">
+      <image class="picture a" src="http://www.bufanui.com/pages/front/pages/teacher/img/ding.png"></image>
+      <view class="info">
+        <view class="name">丁老师</view>
+        <view class="address">不凡学院讲师</view>
+      </view>
+    </swiper-item>
+    <swiper-item class="item">
+      <image class="picture" src="http://www.bufanui.com/pages/front/pages/teacher/img/zhang.png"></image>
+      <view class="info">
+        <view class="name">张老师</view>
+        <view class="address">不凡学院讲师</view>
+      </view>
+    </swiper-item>
+    <swiper-item class="item">
+      <image class="picture" src="http://www.bufanui.com/pages/front/pages/teacher/img/zhao.png"></image>
+      <view class="info">
+        <view class="name">赵老师</view>
+        <view class="address">不凡学院讲师</view>
+      </view>
+    </swiper-item>
+    <swiper-item class="item">
+      <image class="picture" src="http://www.bufanui.com/pages/front/pages/teacher/img/dong.png"></image>
+      <view class="info">
+        <view class="name">董老师</view>
+        <view class="address">不凡学院讲师</view>
+      </view>
+    </swiper-item>
+    <swiper-item class="item">
+      <image class="picture" src="http://www.bufanui.com/pages/front/pages/teacher/img/zhu.png"></image>
+      <view class="info">
+        <view class="name">朱老师</view>
+        <view class="address">不凡学院讲师</view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 课程优势 -->
+<view class="long">
+  <view class="top">
+    <view class="title">师资优势</view>
+    <view class="line"></view>
+    <view class="eng">Teacher</view>
+  </view>
+  <view class="content">
+    <view class="item">
+      <view class="left">
+        <view class="info">真</view>
+      </view>
+      <view class="right">
+        <view class="name">最真的项目案例</view>
+        <view class="desc">接触真实的项目实战，全面了解实际工作流程，学习就等于工作</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left one">
+        <view class="info">好</view>
+      </view>
+      <view class="right">
+        <view class="name">最好的教学师资
+          ！</view>
+        <view class="desc">北京知名一线互联网公司资深设计师担任讲师，现场面授</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left two">
+        <view class="info">精</view>
+      </view>
+      <view class="right">
+        <view class="name">最精品的班级设置</view>
+        <view class="desc">
+
+          每期每班15人，手把手教学，保证每位同学学好学会！</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left three">
+        <view class="info">严</view>
+      </view>
+      <view class="right">
+        <view class="name">最真的项目案例</view>
+        <view class="desc">接触真实的项目实战，全面了解实际工作流程，学习就等于工作</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left four">
+        <view class="info">开</view>
+      </view>
+      <view class="right">
+        <view class="name">最开放的教学方式</view>
+        <view class="desc">
+          分组交流实践，差异化辅导教学，活泼轻松的课堂气氛！</view>
+      </view>
+    </view>
+    <view class="item last">
+      <view class="left five">
+        <view class="info">牛</view>
+      </view>
+      <view class="right">
+        <view class="name">最牛的大咖讲座</view>
+        <view class="desc">
+          定期邀请北京业内大咖开设讲座，满满全是干货！</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 联系我们 -->
+<view class="contact">
+  <view class="top">
+    <view class="title">联系我们</view>
+    <view class="line"></view>
+    <view class="eng">Contact us</view>
+  </view>
+  <view class="item-address">
+    <image src="/images/address_@2x.jpg"></image>
+    <view class="info">
+      <view class="title">地址</view>
+      <view class="desc">郑州市郑东新区金水东路绿地新都会6号楼1210</view>
+    </view>
+  </view>
+  <view class="item-address">
+    <image src="/images/way_@2x.jpg"></image>
+    <view class="info">
+      <view class="title">乘车路线</view>
+      <view class="desc">地铁1号线 东风南路站C口出向北步行300米即到
+        <view>(近郑州东站)</view>
+      </view>
+    </view>
+  </view>
+  <view class="item-address">
+    <image src="/images/phone_@2x.jpg"></image>
+    <view class="info">
+      <view class="title">电话</view>
+      <view class="desc">座机: 0371-55602883 移动电话: 18838180363</view>
+    </view>
+  </view>
+</view>
+<!-- 返回顶部 -->
+<view class="call">
+  咨询
+</view>
+<view class="to-top" bindtap="goTop">
+  ^
+</view>
